@@ -1,0 +1,162 @@
+.login-body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("/public/img/formbackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sideimg img {
+    height: 450px;
+    width: 380px;
+    object-fit:cover;
+    border-radius: 8px;
+}
+
+.form-container {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #F26522;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    color: grey;
+    border-radius: 2px;
+    border-bottom: 1px solid gray ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+.login-form input:focus {
+    border-bottom: 2px solid #F26522;
+}
+.login-form input::placeholder {
+    color: #F26522;
+    font-family: montserrat;
+    font-weight: 450;
+}
+
+.login-form .loginbtn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+
+
+    background-color: #F26522;
+    color: white;
+    cursor: pointer;
+    font-family: montserrat, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .loginbtn :hover {
+    background-color: #dc642d;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 10px 10px 54px rgba(79, 79, 82, 0.2);
+}
+
+.signup-link a {
+    color: #F26522;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #dc642d;
+}
+
+.signup-link p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .sideimg img {
+        height: 250px;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-container h2 {
+        font-size: 18px;
+    }
+
+    .login-form input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .signup-link p {
+        font-size: 14px;
+    }
+}

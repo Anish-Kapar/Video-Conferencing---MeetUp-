@@ -1,0 +1,291 @@
+/* Updated CSS */
+body {
+    margin: 0;
+    color: white;
+    background-color: #1A1D28;
+    /* background-color: black; */
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.part1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: #151638;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.sidebar {
+    padding: 112px 0 24px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.sidebar-logo {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    padding: 24px;
+    background: #151638;
+    border-bottom: 1px solid #2D2F45;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+}
+
+/* .sidebar-options {
+    padding: 0 16px;
+}
+
+.sidebar-options a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 16px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+} */
+
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px;
+}
+
+.sidebar-options a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+    gap: 10px;
+    font-weight: 600;
+    /* border-radius:  */
+
+}
+
+.sidebar-options a:hover {
+    background: #305CDE;
+    border-radius: 1rem;
+}
+
+.part2 {
+    margin-left: 280px;
+    transition: margin 0.3s ease;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px 24px;
+    background: #151638;
+    z-index: 900;
+}
+
+.logo {
+    font-size: 64px;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 34px;
+    margin-right: 16px;
+}
+
+.loginbtn{
+    border: none;
+    background-color:rgba(255, 255, 255, 0.142);
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.loginbtn:hover{
+    background-color:rgba(255, 255, 255, 0.238);
+
+}
+
+.main-content {
+    padding: 24px;
+}
+
+.banner {
+    height: 300px;
+    border-radius: 16px;
+    background-image: url("/public/img/background.png");
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 2rem;
+    gap: 40px;
+}
+.time{
+    margin-top: 3.5rem;
+    /* margin-left: 0rem; */
+    font-size: 4.35rem;
+    font-weight: 600;
+
+}
+.date{
+    /* margin-left: 0rem; */
+    font-size: 3rem;
+    font-weight: 500;
+
+}
+
+.meetings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.new-meeting,
+.join-meeting {
+    padding: 24px;
+    border-radius: 16px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.new-meeting { background: #EC5800; }
+.join-meeting { background: #305CDE; }
+.card-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.326);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.6rem;
+}
+.card-detail{
+    
+    /* padding-top: -2rem; */
+    line-height: 0.75rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content:center; */
+}
+.card-head{
+    font-size: 2.7rem;
+    font-weight: 700;
+
+}
+.card-info{
+    font-size: 1.4rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .part1 {
+        width: 280px;
+        transform: translateX(-100%);
+    }
+    
+    .part1.active {
+        transform: translateX(0);
+    }
+    
+    .part2 {
+        margin-left: 0;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .sidebar-logo span,
+    .sidebar-options a span {
+        display: flex;
+    }
+    
+    .logo span {
+        display: inline;
+    }
+    
+    .meetings {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .part1 {
+        width: 80px;
+    }
+    
+    .sidebar-logo {
+        /* height: 30px; */
+        padding-bottom: 9px;
+        border: none;
+        width: 80px;
+        justify-content: center;
+    }
+    
+    .sidebar-logo span{
+        display: flex;
+    }
+    .sidebar-options a span {
+        display: none;
+    }
+    
+    .sidebar-options a {
+        justify-content: center;
+        padding: 12px;
+    }
+    
+    .part2 {
+        margin-left: 120px;
+    }
+    
+    .logo span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .part1.active + .part2 {
+        position: fixed;
+        right: 0;
+        filter: blur(2px);
+    }
+    
+    .banner {
+        height: 200px;
+    }
+    
+    .logo img {
+        height: 32px;
+    }
+}
+
+/* Mobile Menu Transition */
+.part1 {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blur-effect {
+    filter: blur(2px);
+    pointer-events: none;
+}
